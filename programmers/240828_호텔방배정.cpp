@@ -1,11 +1,12 @@
 #try 1 : 86 -----------------------------------------------------------------
+#try 3 : 100 - map -> unordered_map
 
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
-map<long long, long long> r;
+unordered_map<long long, long long> r;
 
 long long check(long long num)
     {
