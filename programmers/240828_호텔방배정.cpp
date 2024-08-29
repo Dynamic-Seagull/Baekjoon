@@ -1,5 +1,5 @@
-#try 1 : 86 -----------------------------------------------------------------
-#try 3 : 100 - map -> unordered_map
+//try 1 : 86 -----------------------------------------------------------------
+//try 3 : 100 - map -> unordered_map
 
 #include <string>
 #include <vector>
@@ -26,7 +26,7 @@ vector<long long> solution(long long k, vector<long long> room_number) {
     return answer;
 }
 
-#try 2 : 87 -----------------------------------------------------------------
+/*try 2 : 87 -----------------------------------------------------------------
 
 #include <string>
 #include <vector>
@@ -64,6 +64,6 @@ vector<long long> solution(long long k, vector<long long> room_number) {
         r[rst] = rst + 1;
     }
     return answer;
-}
+}*/
 
 
