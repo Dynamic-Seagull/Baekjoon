@@ -1,3 +1,5 @@
+#try 1 : 86 -----------------------------------------------------------------
+
 #include <string>
 #include <vector>
 #include <map>
@@ -22,3 +24,45 @@ vector<long long> solution(long long k, vector<long long> room_number) {
     }
     return answer;
 }
+
+#try 2 : 87 -----------------------------------------------------------------
+
+#include <string>
+#include <vector>
+#include <map>
+using namespace std;
+
+map<long long, long long> r;
+
+long long check(long long num)
+{
+    long long rn = num;
+    vector<long long> f;
+    
+    while (r[rn])
+    {
+        f.push_back(rn);
+        rn = r[rn];
+    }
+    
+    for(int i = 0; i < f.size(); i++)
+        r[f[i]] = rn + 1;
+    
+    return rn;
+        
+}
+
+vector<long long> solution(long long k, vector<long long> room_number) {
+    vector<long long> answer;
+    
+    for(int i = 0; i < room_number.size(); i++)
+    {
+        long long  num = room_number[i];
+        long long rst = check(num);
+        answer.push_back(rst);
+        r[rst] = rst + 1;
+    }
+    return answer;
+}
+
+
