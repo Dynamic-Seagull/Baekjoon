@@ -8,10 +8,10 @@ using namespace std;
 
 int solution(vector<string> arr) 
 {
-	int n = arr.size() / 2 + 1;
+    int n = arr.size() / 2 + 1;
 	
     vector<vector<int>> dmax(n, vector<int>(n, -INF));
-	vector<vector<int>> dmin(n, vector<int>(n, INF));
+    vector<vector<int>> dmin(n, vector<int>(n, INF));
 
     for (int i = 0; i < n; ++i)
 		dmax[i][i] = dmin[i][i] = stoi(arr[i*2]);
