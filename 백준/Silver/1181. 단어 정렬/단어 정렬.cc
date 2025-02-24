@@ -26,7 +26,7 @@ int main()
     n = word.size();
 
     for (int i = 0; i < n; i++)
-        cout << word[i] << endl;
+        cout << word[i] << '\n';
     
     return 0;
 }
